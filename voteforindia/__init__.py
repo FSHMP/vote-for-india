@@ -8,3 +8,4 @@ app.debug = True
 
 
 # import views here
+import views
