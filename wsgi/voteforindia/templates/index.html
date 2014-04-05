@@ -1,34 +1,36 @@
 {% extends 'base.html' %}
 {% block script %}
 <script type="text/javascript">
-    function display(){
-        agri_val = $('#agri').val()
+ function display(i){
+	agri_val = $('#' + i).val()
         $('#agri_val').text(agri_val);
+
     };
+
 </script>
 {% endblock %}
 {% block body %}
 <h1>Vote For India</h1>
 <p>Matches your ideology with Political parties</p>
 
-Agriculture: <input type="range" min="1" max="20" value="10" id="agri" onchange="display();"><p id="agri_val"></p>
+Agriculture: <input type="range" min="1" max="20" value="10" id="agri" onchange="display(id);"><p id="agri_val"></p>
 
-Industry: <input type="range" min="1" max="20" value="10" id="indu" onchange="display();"><p id="indu_val"></p>
+Industry: <input type="range" min="1" max="20" value="10" id="indu" onchange="display(id);"><p id="indu_val"></p>
 
-Technology: <input type="range" min="1" max="20" value="10" id="tech" onchange="display();"><p id="tech_val"></p>
+Technology: <input type="range" min="1" max="20" value="10" id="tech" onchange="display(id);"><p id="tech_val"></p>
 
-Security: <input type="range" min="1" max="20" value="10" id="sec" onchange="display();"><p id="sec_val"></p>
+Security: <input type="range" min="1" max="20" value="10" id="sec" onchange="display(id);"><p id="sec_val"></p>
 
-Anti-corruption: <input type="range" min="1" max="20" value="10" id="antic" onchange="display();"><p id="antic_val"></p>
+Anti-corruption: <input type="range" min="1" max="20" value="10" id="antic" onchange="display(id);"><p id="antic_val"></p>
 
-Minorities: <input type="range" min="1" max="20" value="10" id="mino" onchange="display();"><p id="mino"></p>
+Minorities: <input type="range" min="1" max="20" value="10" id="mino" onchange="display(id);"><p id="mino"></p>
 
-Infrastructure: <input type="range" min="1" max="20" value="10" id="infra" onchange="display();"><p id="infra_val"></p>
+Infrastructure: <input type="range" min="1" max="20" value="10" id="infra" onchange="display(id);"><p id="infra_val"></p>
 
-Public Sector: <input type="range" min="1" max="20" value="10" id="pub" onchange="display();"><p id="pub_val"></p>
+Public Sector: <input type="range" min="1" max="20" value="10" id="pub" onchange="display(id);"><p id="pub_val"></p>
 
-Social Sector: <input type="range" min="1" max="20" value="10" id="soc" onchange="display();"><p id="soc_val"></p>
+Social Sector: <input type="range" min="1" max="20" value="10" id="soc" onchange="display(id);"><p id="soc_val"></p>
 
-Environment: <input type="range" min="1" max="20" value="10" id="env" onchange="display();"><p id="env_val"></p>
+Environment: <input type="range" min="1" max="20" value="10" id="env" onchange="display(id);"><p id="env_val"></p>
 
 {% endblock %}
