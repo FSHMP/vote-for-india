@@ -20,7 +20,7 @@ Vote for India is an app which will try to match your ideology with the politica
                 pip install -U Flask
                 
 ## Step 3 - Run the application
-1. Now cd into the cloned directory.
+1. Now cd into the cloned directory and also into wsgi dir
 2. Start the app like this
 
                 python manage.py
