@@ -1,36 +1,80 @@
 {% extends 'base.html' %}
 {% block script %}
 <script type="text/javascript">
- function display(sector){
-	sector_val = $('#' + sector).val()
-        $('#' + sector + '_val').text(sector_val);
-
+    function display(sector){
+        sectorName = sector
+        sector = $('#' + sector).val()
+        console.log(sector);
+        $('#' + sectorName + '_val').val(sector);
     };
 
 </script>
 {% endblock %}
+
 {% block body %}
 <h1>Vote For India</h1>
 <p>Matches your ideology with Political parties</p>
+<hr/>
+<div class="row">
+    <div class="col-md-2">Agriculture:</div>
+    <div class="col-md-4"><input type="range" min="1" max="20" value="10" id="agriculture" oninput="display(id);"></div>
+    <div class="col-md-4"><output id="agriculture_val" for="agriculture">10</output></div>
+</div>
 
-Agriculture: <input type="range" min="1" max="20" value="10" id="agri" onchange="display(id);"><p id="agri_val"></p>
+<div class="row">
+    <div class="col-md-2">Industry:</div>
+    <div class="col-md-4"><input type="range" min="1" max="20" value="10" id="industry" oninput="display(id);"></div>
+    <div class="col-md-4"><output id="industry_val" for="industry">10</output></div>
+</div>
 
-Industry: <input type="range" min="1" max="20" value="10" id="indu" onchange="display(id);"><p id="indu_val"></p>
+<div class="row">
+    <div class="col-md-2">Technology:</div>
+    <div class="col-md-4"><input type="range" min="1" max="20" value="10" id="technology" oninput="display(id);"></div>
+    <div class="col-md-4"><output id="technology_val" for="technology">10</output></div>
+</div>
 
-Technology: <input type="range" min="1" max="20" value="10" id="tech" onchange="display(id);"><p id="tech_val"></p>
+<div class="row">
+    <div class="col-md-2">Security:</div>
+    <div class="col-md-4"><input type="range" min="1" max="20" value="10" id="security" oninput="display(id);"></div>
+    <div class="col-md-4"><output id="security_val" for="security">10</output></div>
+</div>
 
-Security: <input type="range" min="1" max="20" value="10" id="sec" onchange="display(id);"><p id="sec_val"></p>
+<div class="row">
+    <div class="col-md-2">Anti-corruption:</div>
+    <div class="col-md-4"><input type="range" min="1" max="20" value="10" id="antiCorruption" oninput="display(id);"></div>
+    <div class="col-md-4"><output id="antiCorruption_val" for="antiCorruption">10</output></div>
+</div>
 
-Anti-corruption: <input type="range" min="1" max="20" value="10" id="antic" onchange="display(id);"><p id="antic_val"></p>
+<div class="row">
+    <div class="col-md-2">Minorities:</div>
+    <div class="col-md-4"><input type="range" min="1" max="20" value="10" id="minority" oninput="display(id);"></div>
+    <div class="col-md-4"><output id="minority_val" for="minority">10</output></div>
+</div>
 
-Minorities: <input type="range" min="1" max="20" value="10" id="mino" onchange="display(id);"><p id="mino"></p>
+<div class="row">
+    <div class="col-md-2">Infrastructure:</div>
+    <div class="col-md-4"><input type="range" min="1" max="20" value="10" id="infrastructure" oninput="display(id);"></div>
+    <div class="col-md-4"><output id="infrastructure_val" for="infrastructure">10</output></div>
+</div>
 
-Infrastructure: <input type="range" min="1" max="20" value="10" id="infra" onchange="display(id);"><p id="infra_val"></p>
+<div class="row">
+    <div class="col-md-2">Public Sector:</div>
+    <div class="col-md-4"><input type="range" min="1" max="20" value="10" id="publicSector" oninput="display(id);"></div>
+    <div class="col-md-4"><output id="publicSector_val" for="publicSector">10</output></div>
+</div>
 
-Public Sector: <input type="range" min="1" max="20" value="10" id="pub" onchange="display(id);"><p id="pub_val"></p>
+<div class="row">
+    <div class="col-md-2">Social Sector:</div>
+    <div class="col-md-4"><input type="range" min="1" max="20" value="10" id="socialSector" oninput="display(id);"></div>
+    <div class="col-md-4"><output id="socialSector_val" for="socialSector">10</output></div>
+</div>
 
-Social Sector: <input type="range" min="1" max="20" value="10" id="soc" onchange="display(id);"><p id="soc_val"></p>
+<div class="row">
+    <div class="col-md-2">Environment:</div>
+    <div class="col-md-4"><input type="range" min="1" max="20" value="10" id="environment" oninput="display(id);"></div>
+    <div class="col-md-4"><output id="environment_val" for="environment">10</output></div>
+</div>
 
-Environment: <input type="range" min="1" max="20" value="10" id="env" onchange="display(id);"><p id="env_val"></p>
-
+<br/>
+<input type='button' value='Find My Party' class='btn btn-success'/>
 {% endblock %}
