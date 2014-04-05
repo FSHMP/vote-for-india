@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% block script %}
 <script type="text/javascript">
- function display(i){
-	agri_val = $('#' + i).val()
-        $('#agri_val').text(agri_val);
+ function display(sector){
+	sector_val = $('#' + sector).val()
+        $('#' + sector + '_val').text(sector_val);
 
     };
 
