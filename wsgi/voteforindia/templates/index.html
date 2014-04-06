@@ -21,16 +21,16 @@
 
     function sendData(){
         payload = {
-            'agriculture': $('#agriculture_val').val(),
-            'industry': $('#industry_val').val(),
-            'technology': $('#technology_val').val(),
-            'security': $('#security_val').val(),
-            'antiCorruption': $('#antiCorruption_val').val(),
-            'minorities': $('#minority_val').val(),
-            'infrastructure': $('#infrastructure_val').val(),
-            'publicSector': $('#publicSector_val').val(),
-            'socialSector': $('#socialSector_val').val(),
-            'environment': $('#environment_val').val()
+            'agriculture': Number($('#agriculture_val').val()),
+            'industry': Number($('#industry_val').val()),
+            'technology': Number($('#technology_val').val()),
+            'security': Number($('#security_val').val()),
+            'antiCorruption': Number($('#antiCorruption_val').val()),
+            'minorities': Number($('#minority_val').val()),
+            'infrastructure': Number($('#infrastructure_val').val()),
+            'publicSector': Number($('#publicSector_val').val()),
+            'socialSector': Number($('#socialSector_val').val()),
+            'environment': Number($('#environment_val').val())
         }
 
         // console.log(JSON.stringify(payload));
@@ -39,7 +39,10 @@
 
             onSuccess = function (data, textStatus, jqXHR) {
                 if (jqXHR.status === 200){
-                    alert("Data Submitted");
+                    result = JSON.stringify(data);
+                    $.each(data, function(key, value){
+                            $('#results').append("<li><h3>" + key + "- " + value + "% </h3></li>");
+                    })
                 }
             };
 
@@ -63,6 +66,11 @@
 <h1>Vote For India</h1>
 <p>Matches your ideology with Political parties</p>
 <hr/>
+
+<div>
+    <ul id="results">
+    </ul>
+</div>
 
 <div>
     <h3>You have Rs.100 - how would you divide it among the different sectors below</h3>
