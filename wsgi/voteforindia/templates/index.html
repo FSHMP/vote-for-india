@@ -42,8 +42,7 @@
                     result = JSON.stringify(data);
                     	$('#results').empty()
 			$.each(data, function(key, value){
-                       
-			$('#results').append("<li><h3>" + key + "- " + value + "% </h3></li>");
+                            $('#results').append("<li><h3>" + key + "- " + value + "% </h3></li>");
                     })
                 }
             };
