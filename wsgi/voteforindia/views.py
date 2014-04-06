@@ -56,8 +56,7 @@ def process(data_dict):
     user_aap_percent = calculate_percentage(user_aap_dict)
     user_left_percent = calculate_percentage(user_left_dict)
 
-    return {'bjp': user_bjp_percent, 'cong': user_cong_percent, 'aap': user_aap_percent, 'left': user_left_percent}
-
+    return {'BJP': user_bjp_percent, 'INC': user_cong_percent, 'AAP': user_aap_percent, 'LEFT PARTIES': user_left_percent}
 
 
 @app.route('/respond', methods=['POST'])
