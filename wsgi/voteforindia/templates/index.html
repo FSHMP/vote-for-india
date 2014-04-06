@@ -8,9 +8,15 @@
         $('#' + sectorName + '_val').val(sector);
 
 	sum = Number($('#agriculture_val').val()) + Number($('#industry_val').val()) +  Number($('#technology_val').val()) +  Number($('#security_val').val()) +  Number($('#antiCorruption_val').val()) + Number($('#minority_val').val()) +  Number($('#infrastructure_val').val()) +  Number($('#publicSector_val').val()) + Number($('#socialSector_val').val()) + Number($('#environment_val').val())
+	if (sum == 100)	{
+        	$('#total').text(sum).css('color', 'green');
+		}   
+	else {
+	 $('#total').text(sum).css('color', 'red');
 
-        $('#total').text(sum);
-    };
+	}
+
+ };
 
     function sendData(){
         payload = {
