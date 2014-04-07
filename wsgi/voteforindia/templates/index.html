@@ -45,8 +45,9 @@ if (sum === 100) {
                         for (var party in data)
                                 sortable.push([party, data[party]])
                                 sortable.sort(function(a, b) {return a[1] - b[1]})
-
-                        $.each(sortable, function(key, value){
+	$.each(sortable.reverse(), function(key, value){
+	
+  
 
                         $('#results').append("<li><h3>" +  value[0] + ":"+ value[1] + "% </h3></li>");
                     })
