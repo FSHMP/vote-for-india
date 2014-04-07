@@ -63,3 +63,8 @@ def process(data_dict):
 def respond():
     result = process(request.json)
     return jsonify(result), 200
+
+
+@app.route('/methodology', methods=['GET'])
+def show_methodology():
+    return render_template('methodology.html')
