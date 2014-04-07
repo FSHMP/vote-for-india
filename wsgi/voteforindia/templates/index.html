@@ -34,23 +34,21 @@
         }
 
         // console.log(JSON.stringify(payload));
-if (sum === 100) {
+        if (sum === 100) {
 
             onSuccess = function (data, textStatus, jqXHR) {
                 if (jqXHR.status === 200){
-                    result = JSON.stringify(data);
                         $('#results').empty()
 
                         var sortable = [];
                         for (var party in data)
                                 sortable.push([party, data[party]])
                                 sortable.sort(function(a, b) {return a[1] - b[1]})
-	$.each(sortable.reverse(), function(key, value){
-	
-  
-
-                        $('#results').append("<li><h3>" +  value[0] + ":"+ value[1] + "% </h3></li>");
-                    })
+                                
+                        $.each(sortable.reverse(), function(key, value){
+                            $('#results').append("<li><h3>" +  value[0] + ":"+ value[1] + "% </h3></li>");
+                        })
+                        $('#desc').prepend("<hr/>");
                 }
             };
 
@@ -72,15 +70,15 @@ if (sum === 100) {
 
 {% block body %}
 <h1>Vote For India</h1>
-<p>Matches your ideology with Political parties</p>
+<p>Match your ideology with Political parties</p>
 <hr/>
 
 <div>
-    <ul id="results">
+    <ul id="results" style="list-style: none;">
     </ul>
 </div>
 
-<div>
+<div id="desc">
     <h3>You have Rs.100 - how would you divide it among the different sectors below</h3>
     <p>You have allocated Rs.<span id="total">100</span></p>
 </div>
