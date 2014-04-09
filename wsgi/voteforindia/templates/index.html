@@ -38,25 +38,24 @@
 
             onSuccess = function (data, textStatus, jqXHR) {
                 if (jqXHR.status === 200){
-                        $('#results').empty()
-                            $('#results').append("<p><u>The percentage in the below results are arranged in the order that matches with your ideology</u></p>");
-                        var sortable = [];
-                        for (var party in data)
-                                sortable.push([party, data[party]])
-                                sortable.sort(function(a, b) {return a[1] - b[1]})
-                               var colorr = ["#008000", "#00c957", "#ff6633", "#cc0000"];
-			
-                     
-				var i = 0;
-			 $.each(sortable.reverse(), function(key, value){
-				
-                                $('#results').append("<li><h3>" +  value[0] + ": <span class='badge' style='background-color: "+colorr[i]+" ; font-size: 25px ;'>"+ value[1] + "% </span></h3></li>");
-             			 i = i+1; 
+                    $('#results').empty()
+                    $('#desc hr').remove()
 
-       })
+                    $('#results').append("<p><u>The percentage in the below results are arranged in the order that matches with your ideology</u></p>");
+                    var sortable = [];
+                    for (var party in data)
+                            sortable.push([party, data[party]])
+                            sortable.sort(function(a, b) {return a[1] - b[1]})
+                            var colorr = ["#008000", "#00c957", "#ff6633", "#cc0000"];
+
+                    var i = 0;
+                    $.each(sortable.reverse(), function(key, value){
+                            $('#results').append("<li><h3>" +  value[0] + ": <span class='badge' style='background-color: "+colorr[i]+" ; font-size: 25px;'>"+ value[1] + "% </span></h3></li>");
+                            i = i+1;
+                    })
                     
-                        $('#results').append("<h3><a href='/methodology' target='_blank'>How do we Rank?</a></h3>");
-                        $('#desc').prepend("<hr/>");
+                    $('#results').append("<h3><a href='/methodology' target='_blank'>How do we Rank?</a></h3>");
+                    $('#desc').prepend("<hr/>");
                 }
             };
 
