@@ -12,10 +12,10 @@
 	sum = Number($('#agriculture_val').val()) + Number($('#industry_val').val()) +  Number($('#technology_val').val()) +  Number($('#security_val').val()) +  Number($('#antiCorruption_val').val()) + Number($('#minority_val').val()) +  Number($('#infrastructure_val').val()) +  Number($('#publicSector_val').val()) + Number($('#socialSector_val').val()) + Number($('#environment_val').val())
             
         if (sum === 100)	{
-            $('#total').text(sum).css('color', 'white');
+            $('#total').text(sum).css('background-color', 'green');
 	}   
 	else {
-            $('#total').text(sum).css('color', 'yellow');
+            $('#total').text(sum).css('background-color', 'red');
 	}
     };
 
@@ -92,8 +92,11 @@
     <h3>You have allocated Rs.<span id="total" class="badge" style="font-size: 20px;">100</span></h3>
 </div>
 
+<div id="insctruction">
+	<h4><span id = "instr" style="color:red;">Hint: You can move the slider to the left or right to decrease or increase allocation</span> </h4>
+	
+</div>
 <hr/>
-
 <div class="row">
     <div class="col-md-2">Agriculture:</div>
     <div class="col-md-4"><input autocomplete="off" type="range" min="1" max="20" value="10" id="agriculture" oninput="display(id);"></div>
