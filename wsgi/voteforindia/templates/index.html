@@ -1,10 +1,46 @@
 {% extends 'base.html' %}
 
 {% block script %}
+
+<script type="text/javascript" src = "//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"> </script>
 <script type="text/javascript">
     var sum = 100;
+  
+  function display(sector){
 
-    function display(sector){
+// code block to display ballon hover slider
+ $('#' + sector ).on('input change', function () {
+ 
+      if ( $('#agriculture').val() == 10 ) {
+       $(this).tooltip('show')
+	  .attr('data-original-title', "Move to allocate!")
+            .tooltip('fixTitle')
+            .tooltip('show'); 
+    }
+
+	
+	else if ( $('#agriculture').val()  > 10){
+	       $(this).tooltip('show')
+	  .attr('data-original-title', "+ Increase support prices, write-off farm loans")
+            .tooltip('fixTitle')
+            .tooltip('show'); 
+	} 
+	
+	else
+	{
+	$(this).tooltip('show')
+	  .attr('data-original-title', "- Reduce farm subsidies, more urbanization")
+            .tooltip('fixTitle')
+            .tooltip('show'); 
+	}
+
+
+}  ); 
+
+
+//end
+
+
 	sectorName = sector
         sector = $('#' + sector).val()
         $('#' + sectorName + '_val').val(sector);
@@ -98,8 +134,10 @@
 <hr/>
 <div class="row">
     <div class="col-md-2">Agriculture:</div>
-    <div class="col-md-4"><input autocomplete="off" type="range" min="1" max="20" value="10" id="agriculture" oninput="display(id);"></div>
-    <div class="col-md-4"><output id="agriculture_val" for="agriculture">10</output></div>
+<div class="col-md-4">
+    <input autocomplete="off" type="range" min="1" max="20" value="10" id="agriculture" data-toggle="tooltip" data-placement="bottom"  oninput="display(id);">
+</div>    
+<div class="col-md-4"><output id="agriculture_val" for="agriculture">10</output></div>
 </div>
 
 <div class="row">
