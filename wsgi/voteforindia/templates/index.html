@@ -8,37 +8,6 @@
   
   function display(sector){
 
-// code block to display ballon hover slider
- $('#' + sector ).on('input change', function () {
- 
-      if ( $('#agriculture').val() == 10 ) {
-       $(this).tooltip('show')
-	  .attr('data-original-title', "Move to allocate!")
-            .tooltip('fixTitle')
-            .tooltip('show'); 
-    }
-
-	
-	else if ( $('#agriculture').val()  > 10){
-	       $(this).tooltip('show')
-	  .attr('data-original-title', "+ Increase support prices, write-off farm loans")
-            .tooltip('fixTitle')
-            .tooltip('show'); 
-	} 
-	
-	else
-	{
-	$(this).tooltip('show')
-	  .attr('data-original-title', "- Reduce farm subsidies, more urbanization")
-            .tooltip('fixTitle')
-            .tooltip('show'); 
-	}
-
-
-}  ); 
-
-
-//end
 
 
 	sectorName = sector

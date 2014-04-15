@@ -68,3 +68,12 @@ def respond():
 @app.route('/methodology', methods=['GET'])
 def show_methodology():
     return render_template('methodology.html')
+
+
+@app.route('/about', methods=['GET'])
+def about():
+	return render_template('about.html')
+
+@app.route('/methodology/rank_table', methods=['GET'])
+def rank_table():
+    return render_template('rank_table.html',bjp = bjp_dict,cong = cong_dict, aap = aap_dict, left = left_dict)

@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div align="center">
+<h3>RANK TABLE</h3>
+<br>
+<style>
+table,th,td
+{
+table-layout: fixed;
+text-align:center;
+}
+</style>
+<table style="width:740px">
+<tr>
+  <th>Sectors</th>
+  <th>BJP </th>		
+  <th>Congress</th>
+  <th>AAP</th>		
+  <th>Left</th>
+
+  </tr>
+<tr>
+<tr>
+  <td>Agriculture</td>
+  <td>{{bjp.agriculture}}</td>		
+  <td>{{cong.agriculture}}</td>
+<td>{{aap.agriculture}}</td>
+<td>{{left.agriculture}}</td>
+  </tr>
+<tr>
+ <td>Industry</td> 
+<td>{{bjp.industry}}</td>		
+  <td>{{cong.industry}}</td>
+<td>{{aap.industry}}</td>
+<td>{{left.industry}}</td>
+  </tr>
+<tr>
+  <td>Technology</td>
+  <td>{{bjp.technology}}</td>		
+  <td>{{cong.technology}}</td>
+<td>{{aap.technology}}</td>
+<td>{{left.technology}}</td>
+  </tr>
+<tr>
+  <td>Security</td>
+  <td>{{bjp.security}}</td>		
+  <td>{{cong.security}}</td>
+<td>{{aap.security}}</td>
+<td>{{left.security}}</td>
+  </tr>
+<tr>
+  <td>Anti-Corruption</td>
+  <td>{{bjp.antiCorruption}}</td>		
+  <td>{{cong.antiCorruption}}</td>
+<td>{{aap.antiCorruption}}</td>
+<td>{{left.antiCorruption}}</td>
+  </tr>
+<tr>
+  <td>Minorities</td>
+  <td>{{bjp.minorities}}</td>		
+  <td>{{cong.minorities}}</td>
+<td>{{aap.minorities}}</td>
+<td>{{left.minorities}}</td>
+  </tr>
+<tr>
+  <td>Infrastructure</td>
+  <td>{{bjp.infrastructure}}</td>		
+  <td>{{cong.infrastructure}}</td>
+<td>{{aap.infrastructure}}</td>
+<td>{{left.infrastructure}}</td>
+  </tr>
+<tr>
+  <td>Public Sector</td>
+  <td>{{bjp.publicSector}}</td>		
+  <td>{{cong.publicSector}}</td>
+<td>{{aap.publicSector}}</td>
+<td>{{left.publicSector}}</td>
+  </tr>
+<tr>
+  <td>Social Sector</td>
+  <td>{{bjp.socialSector}}</td>		
+  <td>{{cong.socialSector}}</td>
+<td>{{aap.socialSector}}</td>
+<td>{{left.socialSector}}</td>
+  </tr>
+<tr>
+  <td>Environment</td>
+  <td>{{bjp.environment}}</td>		
+  <td>{{cong.environment}}</td>
+<td>{{aap.environment}}</td>
+<td>{{left.environment}}</td>
+  </tr>
+
+</table>
+<br>
+<p align='center'><b>Note: </b>0 = L | 1 = N | 2 = H</p>
+</div>
+{% endblock %}
+
