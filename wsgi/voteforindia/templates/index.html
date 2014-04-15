@@ -6,6 +6,349 @@
 <script type="text/javascript">
     var sum = 100;
   
+
+$(function () {
+    $("#agriculture").tooltip();
+
+    $('#agriculture').on('input change', function () {
+       if ($(this).val()>10)
+       {
+        $(this).tooltip('show')
+        .attr('data-original-title', '+1 Increase support prices, write-off farm loans')
+            .tooltip('fixTitle')
+            .tooltip('show');
+       }
+        
+	else if ($(this).val()==10)
+        {
+             $(this).tooltip('show')
+        .attr('data-original-title', 'Move slider to allocate')
+            .tooltip('fixTitle')
+            .tooltip('show');
+        
+        }
+
+	else
+        {
+             $(this).tooltip('show')
+        .attr('data-original-title', '+1 Reduce farm subsidies, more urbanization')
+            .tooltip('fixTitle')
+            .tooltip('show');
+        
+        }
+        
+       
+       });
+});
+
+$(function () {
+    $("#industry").tooltip();
+
+    $('#industry').on('input change', function () {
+       if ($(this).val()>10)
+       {
+        $(this).tooltip('show')
+        .attr('data-original-title', '+1 More SEZ, tax sops')
+            .tooltip('fixTitle')
+            .tooltip('show');
+       }
+        
+	else if ($(this).val()==10)
+        {
+             $(this).tooltip('show')
+        .attr('data-original-title', 'Move slider to allocate')
+            .tooltip('fixTitle')
+            .tooltip('show');
+        
+        }
+
+	else
+        {
+             $(this).tooltip('show')
+        .attr('data-original-title', '+1 Tighter labour laws, stricter compliances')
+            .tooltip('fixTitle')
+            .tooltip('show');
+        
+        }
+        
+       
+       });
+});
+
+$(function () {
+    $("#technology").tooltip();
+
+    $('#technology').on('input change', function () {
+       if ($(this).val()>10)
+       {
+        $(this).tooltip('show')
+        .attr('data-original-title', '+1 Incentives for IT, increased space research')
+            .tooltip('fixTitle')
+            .tooltip('show');
+       }
+        
+	else if ($(this).val()==10)
+        {
+             $(this).tooltip('show')
+        .attr('data-original-title', 'Move slider to allocate')
+            .tooltip('fixTitle')
+            .tooltip('show');
+        
+        }
+
+	else
+        {
+             $(this).tooltip('show')
+        .attr('data-original-title', '+1 Discontinue tax cuts in service sector')
+            .tooltip('fixTitle')
+            .tooltip('show');
+        
+        }
+        
+       
+       });
+});
+
+$(function () {
+    $("#security").tooltip();
+
+    $('#security').on('input change', function () {
+       if ($(this).val()>10)
+       {
+        $(this).tooltip('show')
+        .attr('data-original-title', '+1 Brutal suppression of terrorists and Maoists')
+            .tooltip('fixTitle')
+            .tooltip('show');
+       }
+        
+	else if ($(this).val()==10)
+        {
+             $(this).tooltip('show')
+        .attr('data-original-title', 'Move slider to allocate')
+            .tooltip('fixTitle')
+            .tooltip('show');
+        
+        }
+
+	else
+        {
+             $(this).tooltip('show')
+        .attr('data-original-title', '+1 Promote dialogue, more human rights')
+            .tooltip('fixTitle')
+            .tooltip('show');
+        
+        }
+        
+       
+       });
+});
+
+
+$(function () {
+    $("#antiCorruption").tooltip();
+
+    $('#antiCorruption').on('input change', function () {
+       if ($(this).val()>10)
+       {
+        $(this).tooltip('show')
+        .attr('data-original-title', '+1 Powerful Lokpal, more judicial officers')
+            .tooltip('fixTitle')
+            .tooltip('show');
+       }
+        
+	else if ($(this).val()==10)
+        {
+             $(this).tooltip('show')
+        .attr('data-original-title', 'Move slider to allocate')
+            .tooltip('fixTitle')
+            .tooltip('show');
+        
+        }
+
+	else
+        {
+             $(this).tooltip('show')
+        .attr('data-original-title', '+1 Status Quo!')
+            .tooltip('fixTitle')
+            .tooltip('show');
+        
+        }
+        
+       
+       });
+});
+
+$(function () {
+    $("#minority").tooltip();
+
+    $('#minority').on('input change', function () {
+       if ($(this).val()>10)
+       {
+        $(this).tooltip('show')
+        .attr('data-original-title', '+1 More doles for women, Dalits and minorities')
+            .tooltip('fixTitle')
+            .tooltip('show');
+       }
+        
+	else if ($(this).val()==10)
+        {
+             $(this).tooltip('show')
+        .attr('data-original-title', 'Move slider to allocate')
+            .tooltip('fixTitle')
+            .tooltip('show');
+        
+        }
+
+	else
+        {
+             $(this).tooltip('show')
+        .attr('data-original-title', '+1 Common civil code, lesser reservation')
+            .tooltip('fixTitle')
+            .tooltip('show');
+        
+        }
+        
+       
+       });
+});
+
+
+$(function () {
+    $("#infrastructure").tooltip();
+
+    $('#infrastructure').on('input change', function () {
+       if ($(this).val()>10)
+       {
+        $(this).tooltip('show')
+        .attr('data-original-title', '+1 More PPP projects, Concessions for pvt. sector')
+            .tooltip('fixTitle')
+            .tooltip('show');
+       }
+        
+	else if ($(this).val()==10)
+        {
+             $(this).tooltip('show')
+        .attr('data-original-title', 'Move slider to allocate')
+            .tooltip('fixTitle')
+            .tooltip('show');
+        
+        }
+
+	else
+        {
+             $(this).tooltip('show')
+        .attr('data-original-title', '+1 Toll-free roads')
+            .tooltip('fixTitle')
+            .tooltip('show');
+        
+        }
+        
+       
+       });
+});
+
+$(function () {
+    $("#publicSector").tooltip();
+
+    $('#publicSector').on('input change', function () {
+       if ($(this).val()>10)
+       {
+        $(this).tooltip('show')
+        .attr('data-original-title', '+1 More incentives for govt. employees')
+            .tooltip('fixTitle')
+            .tooltip('show');
+       }
+        
+	else if ($(this).val()==10)
+        {
+             $(this).tooltip('show')
+        .attr('data-original-title', 'Move slider to allocate')
+            .tooltip('fixTitle')
+            .tooltip('show');
+        
+        }
+
+	else
+        {
+             $(this).tooltip('show')
+        .attr('data-original-title', '+1 PSU disinvestment, lesser bureaucracy')
+            .tooltip('fixTitle')
+            .tooltip('show');
+        
+        }
+        
+       
+       });
+});
+
+
+$(function () {
+    $("#socialSector").tooltip();
+
+    $('#socialSector').on('input change', function () {
+       if ($(this).val()>10)
+       {
+        $(this).tooltip('show')
+        .attr('data-original-title', '+1 Increased spending in health and education')
+            .tooltip('fixTitle')
+            .tooltip('show');
+       }
+        
+	else if ($(this).val()==10)
+        {
+             $(this).tooltip('show')
+        .attr('data-original-title', 'Move slider to allocate')
+            .tooltip('fixTitle')
+            .tooltip('show');
+        
+        }
+
+	else
+        {
+             $(this).tooltip('show')
+        .attr('data-original-title', '+1 More pvt. participation in health/education')
+            .tooltip('fixTitle')
+            .tooltip('show');
+        
+        }
+        
+       
+       });
+});
+
+$(function () {
+    $("#environment").tooltip();
+
+    $('#environment').on('input change', function () {
+       if ($(this).val()>10)
+       {
+        $(this).tooltip('show')
+        .attr('data-original-title', '+1 Tighter norms, subsidized public transport')
+            .tooltip('fixTitle')
+            .tooltip('show');
+       }
+        
+	else if ($(this).val()==10)
+        {
+             $(this).tooltip('show')
+        .attr('data-original-title', 'Move slider to allocate')
+            .tooltip('fixTitle')
+            .tooltip('show');
+        
+        }
+
+	else
+        {
+             $(this).tooltip('show')
+        .attr('data-original-title', '+1 Cheaper fuel, Lower emission norms')
+            .tooltip('fixTitle')
+            .tooltip('show');
+        
+        }
+        
+       
+       });
+});
   function display(sector){
 
 
