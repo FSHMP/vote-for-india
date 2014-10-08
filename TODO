@@ -1,6 +1,15 @@
 This file contains features yet to be implemented
 -------------
 
+---------
+Technical
+---------
 1. Allowing user to manually enter the amount instead of using slider
 2. Feedback to user on what it means as they increase or decrease the amount.
-3. Find a method to improve the Rank table.
+3. Include bootstrap in static folder and server locally, instead of consuming from CDN
+
+
+-------------
+Non-Technical
+-------------
+1. Find a method to improve the Rank table.
