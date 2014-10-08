@@ -23,7 +23,7 @@ Vote for India is an app which will try to match your ideology with the politica
 1. Now cd into the cloned directory and also into wsgi dir
 2. Start the app like this
 
-                python manage.py
+                python manage.py runserver
                 
 3. This will start the app in the default port number 5000 and will be available at
 
